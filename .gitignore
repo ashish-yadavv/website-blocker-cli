@@ -1,0 +1,3 @@
+blocker
+*.o
+.DS_Store

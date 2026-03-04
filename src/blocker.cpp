@@ -13,7 +13,7 @@ int addSite(int argc, char *argv[]) {
     }
 
     string domain=argv[2];
-    string t1="127.0.0.1 " + domain + " #BLOCKED_BY_BLOCKER";
+    string t1="127.0.0.1 " + domain + " #BLOCKED_BY_BLOCKER"; //using these tags to identify what I added
     string t2="127.0.0.1 www." + domain + " #BLOCKED_BY_BLOCKER";
 
     fstream file;
@@ -102,7 +102,7 @@ int removeSite(int argc, char *argv[]) {
         return 1;
     }
 
-    for (const string &i : fileLines)
+    for (const string &i : fileLines) //faster than normal loop
         file << i << endl;
 
     cout<<"Site Removed Successfully!";
